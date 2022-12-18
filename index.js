@@ -7,6 +7,10 @@ app.get("/", (req, res) => {
     console.log("Acceding to content");
 });
 
+app.post("/pedidonuevo", (req, res) => {
+    console.log("Nuevo pedido");
+});
+
 app.listen(port, () => {
     console.log("Server running");
 })

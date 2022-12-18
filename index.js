@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/pedidonuevo", (req, res) => {
+    res.send("ok").status(200);
     console.log("Nuevo pedido");
 });
 

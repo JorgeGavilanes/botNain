@@ -35,7 +35,8 @@ app.post("/pedidonuevo", (req, res) => {
         // Total del pedido
         data.total = parseFloat(req.body.total);
         // Whatsapp del cliente
-        data.userWhatsapp = parseFloat("593" + req.body.billing.phone);
+        let phone = req.body.billing.phone;
+        data.userWhatsapp = parseFloat("593" + phone.slice(1));
         // Nombre del cliente
         data.userName = req.body.shipping.first_name;
         // Apellido del cliente

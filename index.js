@@ -286,8 +286,9 @@ Calle secundaria de la tienda : ${data.storeAddress2}
 Orden : *${data.orden}*
 Método de pago : ${data.paymentMethod}
 Método de envío : ${data.shippingMethod}
-Calle principal : ${data.userAddress1}
-Calle secundaria : ${data.userAddress2}
+Nombre de la tienda : ${data.storeName}
+Calle principal de la tienda : ${data.storeAddress1}
+Calle secundaria de la tienda : ${data.storeAddress2}
 *Costo total : $${data.total}*
 
 Por favor confirma tu compra`

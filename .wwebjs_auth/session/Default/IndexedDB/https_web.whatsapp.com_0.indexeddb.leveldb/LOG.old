@@ -1,0 +1,65 @@
+2022/12/20-10:24:39.498 3588 Reusing MANIFEST C:\Users\USUARIO\Desktop\botNain\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/20-10:24:39.499 3588 Recovering log #772
+2022/12/20-10:24:39.594 3588 Reusing old log C:\Users\USUARIO\Desktop\botNain\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000772.log 
+2022/12/20-10:24:39.595 3588 Delete type=2 #762
+2022/12/20-10:24:39.595 3588 Delete type=2 #763
+2022/12/20-10:24:39.595 3588 Delete type=2 #764
+2022/12/20-10:24:39.595 3588 Delete type=2 #775
+2022/12/20-10:25:09.319 46d4 Level-0 table #792: started
+2022/12/20-10:25:09.385 46d4 Level-0 table #792: 1219673 bytes OK
+2022/12/20-10:25:09.388 46d4 Delete type=0 #772
+2022/12/20-10:25:09.792 27bc Compacting 1@0 + 0@1 files
+2022/12/20-10:25:09.906 27bc Generated table #793@0: 15001 keys, 429383 bytes
+2022/12/20-10:25:09.915 27bc Generated table #794@0: 559 keys, 94767 bytes
+2022/12/20-10:25:09.915 27bc Compacted 1@0 + 0@1 files => 524150 bytes
+2022/12/20-10:25:09.917 27bc compacted to: files[ 0 2 22 0 0 0 0 ]
+2022/12/20-10:25:10.365 3df0 Compacting 1@1 + 11@2 files
+2022/12/20-10:25:10.692 3df0 Generated table #795@1: 36577 keys, 2256623 bytes
+2022/12/20-10:25:10.880 3df0 Generated table #796@1: 10966 keys, 2173154 bytes
+2022/12/20-10:25:10.984 3df0 Generated table #797@1: 3753 keys, 2161220 bytes
+2022/12/20-10:25:11.087 3df0 Generated table #798@1: 4087 keys, 2159715 bytes
+2022/12/20-10:25:11.168 3df0 Generated table #799@1: 3717 keys, 2157950 bytes
+2022/12/20-10:25:11.262 3df0 Generated table #800@1: 3293 keys, 2160395 bytes
+2022/12/20-10:25:11.383 3df0 Generated table #801@1: 3938 keys, 2161271 bytes
+2022/12/20-10:25:11.479 3df0 Generated table #802@1: 3876 keys, 2160339 bytes
+2022/12/20-10:25:11.623 3df0 Generated table #803@1: 16498 keys, 2173307 bytes
+2022/12/20-10:25:11.851 3df0 Generated table #804@1: 33708 keys, 2242989 bytes
+2022/12/20-10:25:11.893 3df0 Generated table #805@1: 4710 keys, 349728 bytes
+2022/12/20-10:25:11.893 3df0 Compacted 1@1 + 11@2 files => 22156691 bytes
+2022/12/20-10:25:11.895 3df0 compacted to: files[ 0 1 22 0 0 0 0 ]
+2022/12/20-10:25:11.895 3df0 Delete type=2 #760
+2022/12/20-10:25:11.895 3df0 Delete type=2 #776
+2022/12/20-10:25:11.896 3df0 Delete type=2 #777
+2022/12/20-10:25:11.896 3df0 Delete type=2 #778
+2022/12/20-10:25:11.896 3df0 Delete type=2 #779
+2022/12/20-10:25:11.896 3df0 Delete type=2 #780
+2022/12/20-10:25:11.896 3df0 Delete type=2 #781
+2022/12/20-10:25:11.896 3df0 Delete type=2 #782
+2022/12/20-10:25:11.896 3df0 Delete type=2 #783
+2022/12/20-10:25:11.896 3df0 Delete type=2 #784
+2022/12/20-10:25:11.896 3df0 Delete type=2 #785
+2022/12/20-10:25:11.896 3df0 Delete type=2 #792
+2022/12/20-10:25:11.896 3df0 Delete type=2 #793
+2022/12/20-10:26:18.068 b7c Compacting 1@1 + 10@2 files
+2022/12/20-10:26:18.291 b7c Generated table #806@1: 28635 keys, 2255771 bytes
+2022/12/20-10:26:18.483 b7c Generated table #807@1: 28955 keys, 2252750 bytes
+2022/12/20-10:26:18.674 b7c Generated table #808@1: 15228 keys, 2153271 bytes
+2022/12/20-10:26:18.814 b7c Generated table #809@1: 16741 keys, 2145036 bytes
+2022/12/20-10:26:19.215 b7c Generated table #810@1: 114260 keys, 2268862 bytes
+2022/12/20-10:26:19.643 b7c Generated table #811@1: 101520 keys, 2251947 bytes
+2022/12/20-10:26:20.101 b7c Generated table #812@1: 100051 keys, 2251024 bytes
+2022/12/20-10:26:20.477 b7c Generated table #813@1: 101878 keys, 2251850 bytes
+2022/12/20-10:26:20.622 b7c Generated table #814@1: 35701 keys, 812737 bytes
+2022/12/20-10:26:20.622 b7c Compacted 1@1 + 10@2 files => 18643248 bytes
+2022/12/20-10:26:20.624 b7c compacted to: files[ 0 0 21 0 0 0 0 ]
+2022/12/20-10:26:20.625 b7c Delete type=2 #765
+2022/12/20-10:26:20.625 b7c Delete type=2 #766
+2022/12/20-10:26:20.625 b7c Delete type=2 #767
+2022/12/20-10:26:20.625 b7c Delete type=2 #768
+2022/12/20-10:26:20.625 b7c Delete type=2 #769
+2022/12/20-10:26:20.625 b7c Delete type=2 #770
+2022/12/20-10:26:20.625 b7c Delete type=2 #786
+2022/12/20-10:26:20.625 b7c Delete type=2 #787
+2022/12/20-10:26:20.625 b7c Delete type=2 #788
+2022/12/20-10:26:20.625 b7c Delete type=2 #789
+2022/12/20-10:26:20.625 b7c Delete type=2 #794

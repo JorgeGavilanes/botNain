@@ -1,14 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const qrcode = require("qrcode-terminal");
-const { Client, Location, List, Buttons } = require('whatsapp-web.js');
+const { Client, Location, List, Buttons, LocalAuth } = require('whatsapp-web.js');
 const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
 const client = new Client({
-    // authStrategy: new LocalAuth(),
+    authStrategy: new LocalAuth(),
     puppeteer: { headless: true }
 });
 

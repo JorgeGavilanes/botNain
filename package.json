@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "body-parser": "^1.20.1",
+    "chrome-aws-lambda": "^10.1.0",
     "express": "^4.18.2",
     "puppeteer": "^19.4.1",
     "puppeteer-core": "^19.4.1",

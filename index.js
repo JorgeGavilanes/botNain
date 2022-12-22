@@ -9,7 +9,7 @@ const puppeteer = require("puppeteer-core");
 async function run() {
     const browser = await puppeteer.launch({
       headless: true,
-      executablePath: "/path/to/node_modules/chromium"
+      executablePath: "/path/to/chromium"
     });
     
     app.use(bodyParser.json());

@@ -4,11 +4,12 @@ const qrcode = require("qrcode-terminal");
 const { Client, Location, List, Buttons, LocalAuth } = require('whatsapp-web.js');
 const app = express();
 const port = process.env.PORT || 8080;
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-core");
 
 async function run() {
     const browser = await puppeteer.launch({
       headless: true,
+      executablePath: "/path/to/node_modules/chromium"
     });
     
     app.use(bodyParser.json());

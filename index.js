@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 const client = new Client({
-    // authStrategy: new LocalAuth(),
+    authStrategy: new LocalAuth(),
     puppeteer: { 
         headless: true
     }
@@ -303,7 +303,7 @@ Por favor confirma tu compra`
 });
 
 app.get("/", (req, res) => {
-    res.send("¡Hola mundo!");
+    res.status(200).send("¡Hola mundo!");
     console.log("Acceding to content");
 });
 

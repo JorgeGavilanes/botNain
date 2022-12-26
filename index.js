@@ -114,9 +114,9 @@ app.post("/pedidonuevo", (req, res) => {
     
     Por favor confirma tu compra`
     
-            let confirmacion = new Buttons(clientMsg,[{id:`[${data.orden},true]`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
+            let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
-            // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
+            client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
         } else {
             const clientMsg = 
             `¡Hola ${data.userName}, gracias por tu pedido🥳!
@@ -131,9 +131,9 @@ app.post("/pedidonuevo", (req, res) => {
     
     Por favor confirma tu compra`
     
-            let confirmacion = new Buttons(clientMsg,[{id:`[${data.orden},true]`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
+            let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
-            // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
+            client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
         }
     } else {
         // Multi tienda
@@ -150,9 +150,9 @@ app.post("/pedidonuevo", (req, res) => {
     Método de envío : ${data.shippingMethod}
     Calle principal del cliente : ${data.userAddress1}
     Calle secundaria del cliente : ${data.userAddress2}
-    Nombre de la tienda : ${data.stores}
-    Calle principal de la tienda : ${data.stores}
-    Calle secundaria de la tienda : ${data.stores}
+    Nombre de la tienda : ${data.stores[0][0]}
+    Calle principal de la tienda : ${data.stores[0][1]}
+    Calle secundaria de la tienda : ${data.stores[0][2]}
     *Costo total : $${data.total}*`
     client.sendMessage("593988858191@c.us", adminMsg);
 });

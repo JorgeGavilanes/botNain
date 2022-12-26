@@ -117,7 +117,7 @@ Por favor confirma tu compra`
             // let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
             // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
-            client.sendMessage(data.userWhatsapp + "@c.us", clientMsg);
+            // client.sendMessage(data.userWhatsapp + "@c.us", clientMsg);
         } else {
             const clientMsg = 
             `¡Hola ${data.userName}, gracias por tu pedido🥳!
@@ -135,7 +135,7 @@ Por favor confirma tu compra`
             // let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
             // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
-            client.sendMessage(data.userWhatsapp + "@c.us", clientMsg);
+            // client.sendMessage(data.userWhatsapp + "@c.us", clientMsg);
         }
     } else {
         // Multi tienda

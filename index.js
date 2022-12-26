@@ -106,34 +106,36 @@ app.post("/pedidonuevo", (req, res) => {
         if (data.isDelivery){
             const clientMsg = 
             `¡Hola ${data.userName}, gracias por tu pedido🥳!
-    --------------------------
-    Orden : *${data.orden}*
-    Método de pago : ${data.paymentMethod}
-    Método de envío : ${data.shippingMethod}
-    *Costo total : $${data.total}*
+--------------------------
+Orden : *${data.orden}*
+Método de pago : ${data.paymentMethod}
+Método de envío : ${data.shippingMethod}
+*Costo total : $${data.total}*
+
+Por favor confirma tu compra`
     
-    Por favor confirma tu compra`
-    
-            let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
+            // let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
-            client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
+            // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
+            client.sendMessage(data.userWhatsapp + "@c.us", clientMsg);
         } else {
             const clientMsg = 
             `¡Hola ${data.userName}, gracias por tu pedido🥳!
-    --------------------------
-    Orden : *${data.orden}*
-    Método de pago : ${data.paymentMethod}
-    Método de envío : ${data.shippingMethod}
-    Nombre de la tienda : ${data.stores[0][0]}
-    Calle principal de la tienda : ${data.stores[0][1]}
-    Calle secundaria de la tienda : ${data.stores[0][2]}
-    *Costo total : $${data.total}*
+--------------------------
+Orden : *${data.orden}*
+Método de pago : ${data.paymentMethod}
+Método de envío : ${data.shippingMethod}
+Nombre de la tienda : ${data.stores[0][0]}
+Calle principal de la tienda : ${data.stores[0][1]}
+Calle secundaria de la tienda : ${data.stores[0][2]}
+*Costo total : $${data.total}*
+
+Por favor confirma tu compra`
     
-    Por favor confirma tu compra`
-    
-            let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
+            // let confirmacion = new Buttons(clientMsg,[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
-            client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
+            // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
+            client.sendMessage(data.userWhatsapp + "@c.us", clientMsg);
         }
     } else {
         // Multi tienda
@@ -141,19 +143,19 @@ app.post("/pedidonuevo", (req, res) => {
     //Enviar mensaje de pedido nuevo al admin
     const adminMsg = 
             `¡Nuevo pedido🎉!
-    ---------------------
-    Orden : *${data.orden}*
-    Nombre del cliente : ${data.userName}
-    Apellido del cliente : ${data.userLastName}
-    Whatsapp del cliente : ${data.userWhatsapp}
-    Método de pago : ${data.paymentMethod}
-    Método de envío : ${data.shippingMethod}
-    Calle principal del cliente : ${data.userAddress1}
-    Calle secundaria del cliente : ${data.userAddress2}
-    Nombre de la tienda : ${data.stores[0][0]}
-    Calle principal de la tienda : ${data.stores[0][1]}
-    Calle secundaria de la tienda : ${data.stores[0][2]}
-    *Costo total : $${data.total}*`
+---------------------
+Orden : *${data.orden}*
+Nombre del cliente : ${data.userName}
+Apellido del cliente : ${data.userLastName}
+Whatsapp del cliente : ${data.userWhatsapp}
+Método de pago : ${data.paymentMethod}
+Método de envío : ${data.shippingMethod}
+Calle principal del cliente : ${data.userAddress1}
+Calle secundaria del cliente : ${data.userAddress2}
+Nombre de la tienda : ${data.stores[0][0]}
+Calle principal de la tienda : ${data.stores[0][1]}
+Calle secundaria de la tienda : ${data.stores[0][2]}
+*Costo total : $${data.total}*`
     client.sendMessage("593988858191@c.us", adminMsg);
 });
 

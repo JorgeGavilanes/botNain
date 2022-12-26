@@ -140,23 +140,6 @@ Por favor confirma tu compra`
     } else {
         // Multi tienda
     }
-    //Enviar mensaje de pedido nuevo al admin
-    const adminMsg = 
-            `¡Nuevo pedido🎉!
----------------------
-Orden : *${data.orden}*
-Nombre del cliente : ${data.userName}
-Apellido del cliente : ${data.userLastName}
-Whatsapp del cliente : ${data.userWhatsapp}
-Método de pago : ${data.paymentMethod}
-Método de envío : ${data.shippingMethod}
-Calle principal del cliente : ${data.userAddress1}
-Calle secundaria del cliente : ${data.userAddress2}
-Nombre de la tienda : ${data.stores[0][0]}
-Calle principal de la tienda : ${data.stores[0][1]}
-Calle secundaria de la tienda : ${data.stores[0][2]}
-*Costo total : $${data.total}*`
-    client.sendMessage("593988858191@c.us", adminMsg);
 });
 
 app.get("/", (req, res) => {

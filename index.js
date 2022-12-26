@@ -8,10 +8,7 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 const client = new Client({
-     authStrategy: new LocalAuth(),
-    puppeteer: { 
-        headless: true
-    }
+     authStrategy: new LocalAuth()
 });
 
 client.initialize();

@@ -116,7 +116,7 @@ app.post("/pedidonuevo", (req, res) => {
     
             let confirmacion = new Buttons(clientMsg,[{id:`[${data.orden},true]`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
-            client.sendMessage("+" + data.userWhatsapp + "@c.us", confirmacion);
+            // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
         } else {
             const clientMsg = 
             `¡Hola ${data.userName}, gracias por tu pedido🥳!
@@ -133,7 +133,7 @@ app.post("/pedidonuevo", (req, res) => {
     
             let confirmacion = new Buttons(clientMsg,[{id:`[${data.orden},true]`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
             
-            client.sendMessage("+" + data.userWhatsapp + "@c.us", confirmacion);
+            // client.sendMessage(data.userWhatsapp + "@c.us", confirmacion);
         }
     } else {
         // Multi tienda

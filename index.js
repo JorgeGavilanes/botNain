@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 const client = new Client({
-    authStrategy: new LocalAuth(),
+     authStrategy: new LocalAuth(),
     puppeteer: { 
         headless: true
     }
@@ -36,6 +36,16 @@ client.on('auth_failure', msg => {
 client.on('ready', () => {
     console.log('Listo');
 });
+client.on('message', async msg => {
+    if (msg.body === '!ping reply') {
+        // Send a new message as a reply to the current one
+        msg.reply('pong');
+
+    } else if (msg.body === '!ping') {
+        // Send a new message to the same chat
+        client.sendMessage(msg.from, 'pong');
+
+    }});
 /*
 client.on('message', async msg => {
     if (msg.body === '!ping reply') {
@@ -303,7 +313,7 @@ Por favor confirma tu compra`
 });
 
 app.get("/", (req, res) => {
-    res.status(200).send("¡Hola mundo!");
+    res.send("¡Hola mundo!");
     console.log("Acceding to content");
 });
 

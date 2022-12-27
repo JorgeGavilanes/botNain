@@ -39,6 +39,9 @@ client.on('disconnected', (reason) => {
 });
 
 app.post("/pedidonuevo", (req, res) => {
+    res.status(200).send("Ok");
+    console.log(req.body);
+    /*
     const data = {
         orden : 0,
         isDelivery : false,
@@ -139,7 +142,7 @@ Por favor confirma tu compra`
         }
     } else {
         // Multi tienda
-    }
+    }*/
 });
 
 app.get("/", (req, res) => {

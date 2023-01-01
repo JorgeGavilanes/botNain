@@ -39,69 +39,54 @@ client.on('disconnected', (reason) => {
 });
 
 app.post("/pedidonuevo", (req, res) => {
-    res.status(200).send("Ok");
-    console.log(req.body);
-    /*
+    // Esquema datos
     const data = {
         orden : 0,
-        isDelivery : false,
         total : 0,
         userWhatsapp: "",
+        userPhone: "",
         userName: "",
         userLastName : "",
         userAddress1 : "",
         userAddress2 : "",
+        userReference : "",
         paymentMethod : "",
         shippingMethod : "",
-        stores : []
+        stores : [{storeName : "", storeAddress1 : "", storeAddress2 : ""}]
     };
 
-    // Estado de la petición
-    res.status(200).send("Ok");
-
-    // Número de orden
-    (req.body.id == 0)
-    ? data.orden = req.body.parent_id //multiTiendas
-    : data.orden = req.body.id; //unaTienda
-
-// Guardar datos al objeto
-    //Una tienda
-    if(req.body.id != 0){
-        // Delivery
-        (req.body.shipping_total == "0.00")
-        ? data.isDelivery = false
-        : data.isDelivery = true;
+    // Obtener datos
+    if(req.body.parent_id == 0){
+        // Número de orden
+        data.orden = req.body.id;
         // Total del pedido
         data.total = parseFloat(req.body.total);
         // Whatsapp del cliente
-        let phone = req.body.billing.phone;
-        data.userWhatsapp = "593" + phone.slice(1);
-        // Nombre del cliente
-        data.userName = req.body.shipping.first_name;
-        // Apellido del cliente
-        data.userLastName = req.body.shipping.last_name;
-        // Calle 1 del cliente
-        data.userAddress1 = req.body.shipping.address_1;
-        // Calle 2 del cliente
-        data.userAddress2 = req.body.shipping.address_2;
-        // Tipo de pago
-        data.paymentMethod = req.body.payment_method_title;
-        // Tipo de envío
-        data.shippingMethod = req.body.shipping_lines[0].method_title;
-        // Tienda
-        const tienda = []
-        // Nombre de la tienda
-        tienda.push(req.body.store.shop_name);
-        // Dirección 1 de la tienda
-        tienda.push(req.body.store.address.street_1);
-        // Dirección 2 de la tienda
-        tienda.push(req.body.store.address.street_2);
-        data.stores.push(tienda);
-    } else {
-        // Multi tienda
+        let whatsapp = req.body.billing.phone;
+        data.userWhatsapp = "593" + whatsapp.slice(1);
+        // Teléfono de resplado
+        let phone = req.body.meta_data[0].value;
+        data.userPhone = phone;
     }
-    
-    console.log("Nuevo pedido");
+
+    // Datos admin
+
+    // Datos usuario
+
+    // Mensaje admin
+    client.sendMessage("593984795971@c.us", "Nueva tienda");
+    client.sendMessage("593984795971@c.us", JSON.stringify(data));
+    client.sendMessage("593984795971@c.us", JSON.stringify(req.body));
+    let confirmacion = new Buttons("Hola",[{id:`${data.orden},true`, body:'Confirmar'}],'','Nain - ¡Tu portal de tiendas online!');
+            
+    client.sendMessage("593984795971@c.us", confirmacion);
+
+    // Mensaje usuario
+
+    // Enviar respuesta ruta
+    res.status(200).send("Ok");
+    /*
+
 
 // Enviar datos al whastapp
     // Una tienda
